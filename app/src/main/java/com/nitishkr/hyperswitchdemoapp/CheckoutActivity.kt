@@ -29,14 +29,6 @@ class CheckoutActivity : AppCompatActivity() {
     private lateinit var payButton: Button
 
 
-
-    private var shippingDetails: AddressDetails? = null
-
-    private lateinit var addressButton: Button
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_checkout)
