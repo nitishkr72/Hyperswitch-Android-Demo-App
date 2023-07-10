@@ -62,7 +62,10 @@ fs.readFile(
       return;
     }
     let replacedNodePckge = data
-      .replace("com.stripe.*", "io.hyperswitch.*")
+      .replace(
+        "import com.stripe.android.paymentsheet",
+        "\nimport io.hyperswitch.HyperInterface\nimport io.hyperswitch.paymentsheet."
+      )
       .replace(
         ": AppCompatActivity()",
         ": AppCompatActivity(), HyperInterface"
