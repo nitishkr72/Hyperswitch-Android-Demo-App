@@ -61,7 +61,12 @@ fs.readFile(
       console.error(err);
       return;
     }
-    let replacedNodePckge = data.replace("com.stripe.*", "io.hyperswitch.*");
+    let replacedNodePckge = data
+      .replace("com.stripe.*", "io.hyperswitch.*")
+      .replace(
+        ": AppCompatActivity()",
+        ": AppCompatActivity(), HyperInterface"
+      );
 
     fs.writeFile(
       "../app/src/main/java/com/nitishkr/hyperswitchdemoapp/CheckoutActivity.kt",
@@ -71,31 +76,6 @@ fs.readFile(
         console.log(
           "Replaced Stripe imports in checkoutActitvity to hyperswitch"
         );
-      }
-    );
-  }
-);
-
-// implement HyperInterface in activity where you wanted to open paymentsheet
-fs.readFile(
-  "../app/src/main/java/com/nitishkr/hyperswitchdemoapp/CheckoutActivity.kt",
-  "utf8",
-  (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    let replacedNodePckge = data.replace(
-      "class CheckoutActivity : AppCompatActivity() {",
-      "class CheckoutActivity : AppCompatActivity(), HyperInterface {"
-    );
-
-    fs.writeFile(
-      "../app/src/main/java/com/nitishkr/hyperswitchdemoapp/CheckoutActivity.kt",
-      replacedNodePckge,
-      function (err) {
-        if (err) return console.log(err);
-        console.log("Implements Hyperinterface in checkoutactivity");
       }
     );
   }
