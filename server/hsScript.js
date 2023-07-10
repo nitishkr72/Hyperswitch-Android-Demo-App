@@ -67,6 +67,10 @@ fs.readFile(
         "\nimport io.hyperswitch.HyperInterface\nimport io.hyperswitch.paymentsheet"
       )
       .replace(
+        "com.stripe.android.paymentsheet.PaymentSheetResult",
+        "io.hyperswitch.paymentsheet.PaymentSheetResult"
+      )
+      .replace(
         ": AppCompatActivity()",
         ": AppCompatActivity(), HyperInterface"
       );
