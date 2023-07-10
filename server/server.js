@@ -24,6 +24,8 @@ app.post("/create-payment-intent", async (req, res) => {
       capture_method: "automatic",
       authentication_type: "no_three_ds",
       customer_id: "StripeCustomer",
+      business_label: "default",
+      business_country: "US",
       description: "Hello this is description",
       shipping: {
         address: {
