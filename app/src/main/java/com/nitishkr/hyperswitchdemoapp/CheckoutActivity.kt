@@ -7,16 +7,16 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.stripe.android.paymentsheet.PaymentSheet
-import com.stripe.android.paymentsheet.PaymentSheetResult
-import com.stripe.android.paymentsheet.addresselement.AddressDetails
+import io.hyperswitch.HyperInterface
+import io.hyperswitch.paymentsheet.PaymentSheet
+import io.hyperswitch.paymentsheet.PaymentSheetResult
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import java.io.IOException
 
-class CheckoutActivity : AppCompatActivity() {
+class CheckoutActivity : AppCompatActivity(), HyperInterface {
 
     companion object {
         private const val TAG = "CheckoutActivity"
@@ -27,12 +27,6 @@ class CheckoutActivity : AppCompatActivity() {
     private lateinit var paymentSheet: PaymentSheet
 
     private lateinit var payButton: Button
-
-
-
-    private var shippingDetails: AddressDetails? = null
-
-    private lateinit var addressButton: Button
 
 
 

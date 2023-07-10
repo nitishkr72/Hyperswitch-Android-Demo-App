@@ -42,7 +42,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation 'com.stripe:stripe-android:20.26.0'
+    implementation 'io.hyperswitch:hyperswitch-android:+'
+
     implementation "com.squareup.okhttp3:okhttp:4.9.2"
 
 

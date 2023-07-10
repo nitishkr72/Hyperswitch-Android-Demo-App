@@ -10,6 +10,20 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url "https://maven.hyperswitch.io/release/production/android/maven/1.0.0-sandbox01"
+        }
+        maven {
+            url 'https://x.klarnacdn.net/mobile-sdk/'
+        }
+        maven {
+            url "https://cardinalcommerceprod.jfrog.io/artifactory/android"
+            credentials {
+                username 'braintree_team_sdk'
+                password 'AKCp8jQcoDy2hxSWhDAUQKXLDPDx6NYRkqrgFLRc3qDrayg6rrCbJpsKKyMwaykVL8FWusJpp'
+            }
+        }
+
     }
 }
 rootProject.name = "HyperswitchDemoApp"

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-import com.stripe.android.PaymentConfiguration
+import io.hyperswitch.PaymentConfiguration
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         PaymentConfiguration.init(
             applicationContext,
-            "pk_test_51BTUDGJAJfZb9HEBwDg86TN1KNprHjkfipXmEDMb0gSCassK5T3ZfxsAbcgKVmAIXF7oZ6ItlZZbXO6idTHE67IM007EwQ4uN3"
+            "pk_snd_3b33cd9404234113804aa1accaabe22f"
         )
 
         findViewById<Button>(R.id.checkout).setOnClickListener {
